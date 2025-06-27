@@ -38,8 +38,8 @@ Pollen-Classifier/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Rohith-lakshman/Pollen-s-Profiling-Automated-Classification-of-Pollen-Grains/tree/main
-cd Pollen-Classifier
+[git clone https://github.com/Rohith-lakshman/Pollen-s-Profiling-Automated-Classification-of-Pollen-Grains/tree/main
+cd Pollen-Classifier](https://github.com/Rohith-lakshman/Pollen-s-Profiling-Automated-Classification-of-Pollen-Grains.git)
 ```
 
 Or download as ZIP and extract the folder.
