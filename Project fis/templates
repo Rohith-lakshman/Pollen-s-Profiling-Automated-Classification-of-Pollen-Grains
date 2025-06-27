@@ -1,1 +1,70 @@
+index.html
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pollen Classifier</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding-top: 50px; background: #f0f0f0; }
+    h1 { color: #2c3e50; }
+    form { margin: 20px; }
+    input[type=file] { margin: 10px; }
+    button { padding: 10px 20px; background-color: #27ae60; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #219150; }
+  </style>
+</head>
+<body>
+  <h1>Pollen Grain Classifier 🌿</h1>
+  <form action="/predict" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Classify</button>
+  </form>
+  <a href="/logout">Logout</a>
+</body>
+</html>
+
+predction.html
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prediction Result</title>
+  <style>
+    body { font-family: Arial; text-align: center; background: #f8f8f8; padding-top: 40px; }
+    img { border: 2px solid #ccc; padding: 10px; margin-top: 20px; max-width: 300px; }
+    p { font-size: 18px; color: #2c3e50; }
+    a { display: inline-block; margin-top: 20px; color: #2980b9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Prediction Result</h1>
+  <img src="/{{ image_path }}" alt="Uploaded Image" />
+  <p><strong>Predicted Class:</strong> {{ predicted }}</p>
+  <p><strong>Confidence:</strong> {{ '{:.2f}%'.format(confidence * 100) }}</p>
+  <a href="/">Try Another</a>
+  <br><br>
+  <a href="/logout">Logout</a>
+</body>
+</html>
+
+logout.html
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Logout</title>
+  <style>
+    body { font-family: Arial; text-align: center; background-color: #fefefe; padding-top: 60px; }
+    h1 { color: #c0392b; }
+    p { font-size: 18px; color: #555; }
+    a { color: #2980b9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>You have been logged out.</h1>
+  <p>Thank you for using the Pollen Classifier.</p>
+  <a href="/">Return to Home</a>
+</body>
+</html>
